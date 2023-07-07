@@ -1,0 +1,88 @@
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100vw - 20px);
+    gap: 10px;
+    padding: 50px 0 0 0;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo h1 {
+    margin: 10px;
+}
+
+.head-lan {
+    margin-bottom: 30px;
+}
+
+.icon-box {
+    width: 90px;
+    height: 90px;
+    border: solid 3px var(--c-g-dark);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.icon-box::after {
+    content:"南城\A雨落";
+    white-space: pre;
+    color: var(--c-g-gray);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    opacity: 0;
+    transition: all var(--move);
+}
+
+.icon-box:hover{
+    background-color: #fffe;
+}
+
+.icon-box:hover .icon{
+    opacity: 0;
+}
+
+.icon-box:hover::after {
+    opacity: 1;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.menu .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex:1;
+    height: 50px !important;
+    height: 100%;
+    background: transparent;
+}
+
+.menu .btn:not(:last-child){
+    border-right:solid 1px var(--c-g-dark);
+}
+
+.menu .btn:hover {
+    background: var(--c-g-dark-a);
+}
