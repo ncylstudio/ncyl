@@ -168,3 +168,7 @@ hr {
 .toTop:hover {
   background-color: var(--c-g-gray-a);
 }
+
+a {
+  color: var(--c-g-light-a);
+}
