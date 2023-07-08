@@ -153,7 +153,7 @@
                 Email:
                 <span
                   title="点击复制"
-                  onclick="navigator.clipboard.writeText(this.innerText).then(()=>{alert('复制成功')}).catch((err)=>{alert('复制失败')})"
+                  onclick="copyToClipboard(this.innerText);alert('复制成功');"
                   >fangzihe20@outlook.com</span
                 >
               </p>
@@ -161,7 +161,7 @@
                 微信:
                 <span
                   title="点击复制"
-                  onclick="navigator.clipboard.writeText(this.innerText).then(()=>{alert('复制成功，请到微信添加并备注：“GZS”。（微信昵称：“南城雨落”）')}).catch((err)=>{alert('复制失败')})"
+                  onclick="copyToClipboard(this.innerText);alert('复制成功，请到微信添加并备注：“GZS”。（微信昵称：“南城雨落”）');"
                   >15838040139</span
                 >
               </p>
@@ -169,7 +169,7 @@
                 钉钉:
                 <span
                   title="点击复制"
-                  onclick="navigator.clipboard.writeText(this.innerText).then(()=>{alert('复制成功，请到钉钉添加（昵称：“家校本”）')}).catch((err)=>{alert('复制失败')})"
+                  onclick="copyToClipboard(this.innerText);alert('复制成功，请到钉钉添加（昵称：“家校本”）');"
                   >nanchengyuluo</span
                 >
               </p>
