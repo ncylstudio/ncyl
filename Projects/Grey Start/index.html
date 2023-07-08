@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>greyStart New Tab</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./iconfont/iconfont.css" />
+    <style id="moon"></style>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <script src="./iconfont.js"></script>
+    <style>
+      @font-face {
+        font-family: FZSKBXKJW;
+        src: url("./font/FZSKBXKJW.woff2") format("woff2");
+      }
+      .oneWordBox {
+        font-family: FZSKBXKJW, 华文仿宋;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sideBox">
+      <div class="switchColor sideIconBox" onclick="switchColor(this)">
+        <span class="sun sideIcon icon icon-sun"></span>
+        <span
+          style="transform: scale(0, 1); width: 0"
+          class="moon sideIcon icon icon-moon"
+        ></span>
+      </div>
+      <div class="weather sideIconBox" onclick="showWeather()">
+        <span
+          class="sideIcon icon icon-weather"
+          style="font-size: 18px !important"
+        ></span>
+      </div>
+    </div>
+    <div class="weatherBox">
+      <div id="he-plugin-standard"></div>
+    </div>
+    <div class="searchBox">
+      <div class="search">
+        <div class="setEngines">
+          <span type="bing" class="searchIcon searchEngine icon icon-bing"></span>
+        </div>
+        <div class="searchInputBox">
+          <input
+            type="text"
+            class="searchInput"
+            placeholder="Type something..."
+            onfocus="this.placeholder='';"
+            onblur="this.placeholder='Type something...'"
+          />
+        </div>
+        <div class="searchBtn">
+          <span class="searchIcon icon icon-search" style="font-size: 22px !important; display: flex; justify-content: center;"></span>
+        </div>
+      </div>
+      <div class="ASCTwordBox"></div>
+      <div class="enginesBox" style="height: 0"></div>
+    </div>
+    <div class="oneWordBox">
+      <div
+        id="oneWord"
+        onclick="navigator.clipboard.writeText($('.content')[0].innerText + $('.nother')[0].innerText);"
+      >
+        <div class="content"></div>
+        <div class="nother"></div>
+      </div>
+      <div
+        class="prompt"
+        onclick="navigator.clipboard.writeText($('.content')[0].innerText + $('.nother')[0].innerText);"
+      >
+        点击复制
+      </div>
+    </div>
+  </body>
+  <!-- <script src="https://pv.sohu.com/cityjson"></script> -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <!-- <script src="./script/weather.js"></script> -->
+  <script src="./script/openPage.js"></script>
+  <script src="./script/oneWord.js"></script>
+  <script src="./script/script.js"></script>
+  <script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
+</html>

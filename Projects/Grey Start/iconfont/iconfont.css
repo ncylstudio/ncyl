@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "icon"; /* Project id 3859302 */
+  /* Color fonts */
+  src: 
+       url('iconfont.woff2?t=1673397651518') format('woff2'),
+       url('iconfont.woff?t=1673397651518') format('woff'),
+       url('iconfont.ttf?t=1673397651518') format('truetype');
+}
+
+.icon {
+  font-family: "icon" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-kaifa:before {
+  content: "\e603";
+}
+
+.icon-moon:before {
+  content: "\e604";
+}
+
+.icon-bing:before {
+  content: "\e605";
+}
+
+.icon-sun:before {
+  content: "\e606";
+}
+
+.icon-weather:before {
+  content: "\e607";
+}
+
+.icon-github:before {
+  content: "\e608";
+}
+
+.icon-search:before {
+  content: "\e609";
+}
+
+.icon-baidu:before {
+  content: "\e60a";
+}
+
+.icon-google:before {
+  content: "\e60b";
+}
+

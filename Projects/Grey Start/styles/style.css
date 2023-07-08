@@ -1,0 +1,356 @@
+* {
+  padding: 0;
+  margin: 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+:root {
+  --cubic-bezier: 200ms cubic-bezier(0.65, 0.05, 0.1, 1);
+  --searchWidth: 50vw;
+  --font-color: #848484;
+}
+
+input {
+  border: 0;
+  outline-style: none;
+  background: transparent;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  overflow: hidden;
+  display: flex;
+  min-width: 100vw;
+  height: 85vh;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #dbdbdb;
+  transition: all var(--cubic-bezier);
+}
+
+.icon {
+  font-size: 25px !important;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* overflow: hidden; */
+}
+
+.sideBox {
+  align-self: flex-end;
+  margin: 20px;
+}
+
+.sideIcon {
+  width: 25px;
+  height: 25px;
+}
+
+.sideIconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+}
+
+.sideIconBox:hover {
+  background: #8882;
+}
+
+.sideIconBox span {
+  transition: all var(--cubic-bezier);
+}
+
+.switchColor {
+  overflow: hidden;
+}
+
+.weather {
+  z-index: 4;
+}
+
+.weatherBox {
+  background-color: #7b7b7b33;
+  backdrop-filter: blur(2px);
+  --webkit-backdrop-filter: blur(2px);
+  position: absolute;
+  border-top: #ffffffaa 2px solid;
+  border-left: #ffffffaa 2px solid;
+  border-bottom: #7c7c7c77 2px solid;
+  border-right: #7c7c7c77 2px solid;
+  height: 270px;
+  width: 230px;
+  /* overflow: hidden; */
+  top: -280px;
+  right: 70px;
+  border-radius: 10px;
+  z-index: 3;
+  transition: all 150ms cubic-bezier(0.5, 0.3, 0.7, 1.5);
+}
+
+.weatherBox::before {
+  content: "";
+  width: 2px;
+  height: 65px;
+  background: rgb(100, 99, 99);
+  position: absolute;
+  right: calc(50% - 1px);
+  top: -55px;
+  transition: all var(--cubic-bezier);
+  z-index: 5;
+}
+
+.weatherBox::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #dbdbdb;
+  position: absolute;
+  top: 8px;
+  right: calc(50% - 10px);
+  z-index: 4;
+  transition: all var(--cubic-bezier);
+}
+
+.view-vertical * {
+  cursor: auto !important;
+  transition: color var(--cubic-bezier), background-color var(--cubic-bezier);
+}
+
+.wv-lt-location a {
+  display: none !important;
+}
+.wv-lt-refresh {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.wv-top-backdrop {
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+.searchBox {
+  margin-bottom: 10vw;
+  z-index: 1;
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 50px;
+  top: 0;
+  /* border: 1px solid #000; */
+  box-shadow: 0 0 0 #dbdbdb, 0 0 0 #dbdbdb;
+  width: var(--searchWidth);
+  /* padding: 5px; */
+  border-radius: 25px;
+  transition: all var(--cubic-bezier);
+}
+
+@media only screen and (max-width: 800px) {
+  :root {
+    --searchWidth: 80vw;
+  }
+  .searchBox {
+    margin-bottom: 50vw;
+  }
+}
+
+.search:hover,
+.searchBox:focus-within .search {
+  transform: scale(0.99, 0.95);
+  top: 10px;
+  box-shadow: 10px 10px 27px #c1c1c1, -10px -10px 27px #f5f5f5;
+}
+
+.setEngines,
+.searchBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  margin: 5px 4px 4px;
+  transition: all var(--cubic-bezier);
+}
+
+.setEngines:hover,
+.searchBtn:hover {
+  background: #8882;
+}
+
+.searchIcon {
+  height: 20px;
+  width: 20px;
+}
+
+.searchInputBox {
+  flex: 1;
+}
+
+.searchInput {
+  font-size: 16px;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  color: var(--font-color);
+}
+
+.ASCTwordBox {
+  backdrop-filter: blur(2px);
+  --webkit-backdrop-filter: blur(2px);
+  height: 0;
+  margin: 20px auto 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 25px;
+  background: #5551;
+  color: #888;
+  width: var(--searchWidth);
+  transition: height var(--cubic-bezier);
+}
+
+.ASCTwordBox div {
+  transition: padding var(--cubic-bezier);
+  padding: 4px 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ASCTwordBox div:hover {
+  padding-left: 25px;
+  background: #8883;
+}
+
+.enginesBox {
+  margin: 20px;
+  padding: 0 20px;
+  overflow-y: hidden;
+  position: absolute;
+  display: flex;
+  height: 95px;
+  gap: 10px;
+  width: calc(var(--searchWidth) - 75px);
+  align-items: center;
+  border-radius: 10px;
+  background: #ffffff38;
+  backdrop-filter: blur(9px);
+  --webkit-backdrop-filter: blur(9px);
+  transition: all ease-in-out 0.3s;
+  border: none;
+  outline-style: none;
+}
+
+.enginesBox::-webkit-scrollbar {
+  height: 0;
+}
+
+.engine {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  background: #ffffff38;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  transition: all ease-in-out 0.3s;
+}
+
+.engine:hover {
+  width: 90px;
+  height: 90px;
+}
+
+.engine span {
+  display: block;
+  margin-bottom: 10px;
+  width: 25px;
+  height: 25px;
+}
+.engine p {
+  margin: 0;
+  font-weight: 500;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-top: 1px solid #35353522;
+  color: var(--font-color);
+}
+
+.oneWordBox {
+  display: flex;
+  flex-direction: column;
+  color: var(--font-color);
+  align-items: center;
+}
+
+.prompt {
+  padding: 5px;
+  background: #8888;
+  color: #ffffff77;
+  position: relative;
+  top: -30px;
+  width: 50px;
+  font-size: 10px;
+  border-radius: 5px;
+  margin: 0 calc(50vw - 25px);
+  opacity: 0;
+  transition: all ease-in-out 100ms;
+}
+
+#oneWord {
+  position: relative;
+  font-size: 16px;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 300ms cubic-bezier(0.1, 1.1, 0.9, 1);
+}
+
+#oneWord::after {
+  content: "";
+  transition: all 300ms cubic-bezier(0.1, 1.1, 0.9, 1);
+  background: transparent;
+  width: 120%;
+  height: 100px;
+  top: -30px;
+  position: absolute;
+}
+@media (any-hover: hover) {
+  .oneWordBox:has(.prompt:hover) #oneWord::after,
+  #oneWord:hover::after {
+    content: "";
+    background: #88888821;
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+    --webkit-backdrop-filter: blur(2px);
+  }
+
+  #oneWord:hover ~ .prompt {
+    opacity: 1;
+    /* background: #888888; */
+  }
+}
+#oneWord:active,
+.oneWordBox:has(.prompt:active) #oneWord {
+  top: -5px;
+}

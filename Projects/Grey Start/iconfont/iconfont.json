@@ -1,0 +1,72 @@
+{
+  "id": "3859302",
+  "name": "greyStart",
+  "font_family": "font_family",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "33727946",
+      "name": "kaifa",
+      "font_class": "kaifa",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "33727947",
+      "name": "moon",
+      "font_class": "moon",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "33727948",
+      "name": "bing",
+      "font_class": "bing",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "33727949",
+      "name": "sun",
+      "font_class": "sun",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "33727950",
+      "name": "weather",
+      "font_class": "weather",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "33727951",
+      "name": "github",
+      "font_class": "github",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "33727952",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "33727953",
+      "name": "baidu",
+      "font_class": "baidu",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "33727954",
+      "name": "google",
+      "font_class": "google",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    }
+  ]
+}
